@@ -5,3 +5,6 @@ fetch:
 
 compile:
 	ruby build.rb
+
+cp:
+	cp build/* ../jsonschema-schema.org

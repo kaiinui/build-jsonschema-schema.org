@@ -4,11 +4,11 @@ end
 class JsonSchema::JsonSchema
   attr_accessor :_schema, # String
                 :id, # String
-                :required, # Boolean
+                :required, # Array<String>
                 :title, # String
                 :name, # String
                 :description, # String
-                :type, # String ["in"]
+                :type, # String
                 :properties # Array<JsonSchema::Property>
 
   def initialize
