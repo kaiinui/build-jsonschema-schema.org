@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Thing - schema.org</title>
+    <meta name="description" content="Schema.org is a set of extensible schemas that enables webmasters to embed
+    structured data on their web pages for use by search engines and other applications." />
+    <link rel="stylesheet" type="text/css"
+          href="/docs/schemaorg.css" />
+
+    <link href="/docs/prettify.css" type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" src="/docs/prettify.js">
+    </script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function(){
+        prettyPrint();
+        setTimeout(function(){
+
+  $(".atn:contains(itemscope), .atn:contains(itemtype), .atn:contains(itemprop), .atn:contains(itemid), .atn:contains(time), .atn:contains(datetime), .atn:contains(datetime), .tag:contains(time) ").addClass('new');
+  $('.new + .pun + .atv').addClass('curl');
+
+        }, 500);
+        setTimeout(function(){
+
+  $(".atn:contains(property), .atn:contains(typeof) ").addClass('new');
+  $('.new + .pun + .atv').addClass('curl');
+
+        }, 500);
+        setTimeout(function() {
+          $('.ds-selector-tabs .selectors a').click(function() {
+            var $this = $(this);
+            var $p = $this.parents('.ds-selector-tabs');
+            $('.selected', $p).removeClass('selected');
+            $this.addClass('selected');
+            $('pre.' + $this.data('selects'), $p).addClass('selected');
+          });
+        }, 0);
+      });
+</script>
+
+<style>
+
+  .pln    { color: #444;    } /* plain text                 */
+  .tag    { color: #515484; } /* div, span, a, etc          */
+  .atn,
+  .atv    { color: #314B17; } /* href, datetime             */
+  .new    { color: #660003; } /* itemscope, itemtype, etc,. */
+  .curl   { color: #080;    } /* new url                    */
+
+  table.definition-table {
+    border-spacing: 3px;
+    border-collapse: separate;
+  }
+
+</style>
+
+</head>
+<body>
+    <div id="container">
+        <div id="intro">
+            <div id="pageHeader">
+              <div class="wrapper">
+                <h1>schema.org</h1>
+
+<div id="cse-search-form" style="width: 400px;"></div>
+
+<script type="text/javascript" src="//www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load('search', '1', {language : 'en', style : google.loader.themes.ESPRESSO});
+  google.setOnLoadCallback(function() {
+    var customSearchControl = new google.search.CustomSearchControl('013516846811604855281:nj5laplixaa');
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    var options = new google.search.DrawOptions();
+    options.enableSearchboxOnly("/docs/search_results.html", null, false, '#');
+    customSearchControl.draw('cse-search-form', options);
+  }, true);
+</script>
+
+
+              </div>
+            </div>
+        </div>
+    </div>
+
+            <div id="selectionbar">
+               <div class="wrapper">
+                <ul>
+                    <li >
+                      <a href="docs/documents.html">Documentation</a></li>
+                    <li class="activelink">
+                      <a href="docs/schemas.html">Schemas</a></li>
+                    <li >
+                      <a href=".">Home</a></li>
+                </ul>
+                </div>
+
+            </div>
+        <div style="padding: 14px; float: right;" id="languagebox"></div>
+
+
+
+  <div id="mainContent" vocab="http://schema.org/" typeof="rdfs:Class" resource="http://schema.org/Thing">
+  <!-- no external mappings noted for this term. -->
+
+<h1 class="page-title">
+<a href="Thing">Thing</a></span></h1> <div property="rdfs:comment">The most generic type of item.</div>
+
+
+<table class="definition-table">
+        <thead>
+  <tr><th>Property</th><th>Expected Type</th><th>Description</th>               
+  </tr>
+  </thead>
+
+<thead class="supertype">
+  <tr>
+    <th class="supertype-name" colspan="3">Properties from <a href="Thing" property="rdfs:subClassOf">Thing</a></th>
+  </tr>
+</thead>
+
+<tbody class="supertype">
+  <tr typeof="rdfs:Property" resource="http://schema.org/additionalType">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a href="additionalType">additionalType</a></code>
+    </th>
+ <td class="prop-ect">
+<a href="URL" property="rangeIncludes">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/alternateName">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a href="alternateName">alternateName</a></code>
+    </th>
+ <td class="prop-ect">
+<a href="Text" property="rangeIncludes">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An alias for the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/description">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a href="description">description</a></code>
+    </th>
+ <td class="prop-ect">
+<a href="Text" property="rangeIncludes">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a href="image">image</a></code>
+    </th>
+ <td class="prop-ect">
+<a href="URL" property="rangeIncludes">URL</a>&nbsp; or <br/> <a href="ImageObject" property="rangeIncludes">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a href="name">name</a></code>
+    </th>
+ <td class="prop-ect">
+<a href="Text" property="rangeIncludes">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The name of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/potentialAction">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a href="potentialAction">potentialAction</a></code>
+    </th>
+ <td class="prop-ect">
+<a href="Action" property="rangeIncludes">Action</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sameAs">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a href="sameAs">sameAs</a></code>
+    </th>
+ <td class="prop-ect">
+<a href="URL" property="rangeIncludes">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/url">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a href="url">url</a></code>
+    </th>
+ <td class="prop-ect">
+<a href="URL" property="rangeIncludes">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">URL of the item.</td></tr></table>
+<br/><br/>Instances of <a href="Thing">Thing</a> may appear as values for the following properties<br/><table class="definition-table">
+        
+  
+<thead>
+  <tr><th>Property</th><th>On Types</th><th>Description</th>               
+  </tr>
+</thead>
+
+<tr>
+<th class="prop-nam" scope="row">
+ <code><a href="about">about</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="CommunicateAction">CommunicateAction</a>&nbsp; or<br/> <a href="CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc">The subject matter of the content. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="category">category</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="Offer">Offer</a>&nbsp; or<br/> <a href="PhysicalActivity">PhysicalActivity</a>&nbsp;</td><td class="prop-desc">A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="characterAttribute">characterAttribute</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="VideoGameSeries">VideoGameSeries</a>&nbsp; or<br/> <a href="Game">Game</a>&nbsp;</td><td class="prop-desc">A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage). </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="collection">collection</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="UpdateAction">UpdateAction</a>&nbsp;</td><td class="prop-desc">A sub property of object. The collection target of the action. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="defaultValue">defaultValue</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="PropertyValueSpecification">PropertyValueSpecification</a>&nbsp;</td><td class="prop-desc">The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="error">error</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="Action">Action</a>&nbsp;</td><td class="prop-desc">For failed actions, more information on the cause of the failure. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="gameItem">gameItem</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="VideoGameSeries">VideoGameSeries</a>&nbsp; or<br/> <a href="Game">Game</a>&nbsp;</td><td class="prop-desc">An item is an object within the game world that can be collected by a player or, occasionally, a non-player character. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="gamePlatform">gamePlatform</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="VideoGameSeries">VideoGameSeries</a>&nbsp; or<br/> <a href="VideoGame">VideoGame</a>&nbsp;</td><td class="prop-desc">The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="instrument">instrument</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="Action">Action</a>&nbsp;</td><td class="prop-desc">The object that helped the agent perform the action. e.g. John wrote a book with *a pen*. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="item">item</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="ListItem">ListItem</a>&nbsp;</td><td class="prop-desc">An entity represented by an entry in a list (e.g. an 'artist' in a list of 'artists')’. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="itemListElement">itemListElement</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="ItemList">ItemList</a>&nbsp;</td><td class="prop-desc">For itemListElement values, you can use simple strings (e.g. "Peter", "Paul, "Mary"), existing entities, or use ListItem.
+    <br/><br/>
+    Text values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.
+    <br/><br/>
+    Note: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a 'position' property in such cases. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="itemReviewed">itemReviewed</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="AggregateRating">AggregateRating</a>&nbsp; or<br/> <a href="Review">Review</a>&nbsp;</td><td class="prop-desc">The item that is being reviewed/rated. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="mentions">mentions</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc">Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="object">object</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="Action">Action</a>&nbsp;</td><td class="prop-desc">The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). e.g. John read *a book*. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="option">option</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="ChooseAction">ChooseAction</a>&nbsp;</td><td class="prop-desc">A sub property of object. The options subject to this action. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="produces">produces</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="Service">Service</a>&nbsp;</td><td class="prop-desc">The tangible thing generated by the service, e.g. a passport, permit, etc. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="programmingLanguage">programmingLanguage</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="Code">Code</a>&nbsp;</td><td class="prop-desc">The computer programming language. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="purpose">purpose</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="PayAction">PayAction</a>&nbsp; or<br/> <a href="MedicalDevice">MedicalDevice</a>&nbsp; or<br/> <a href="AllocateAction">AllocateAction</a>&nbsp;</td><td class="prop-desc">A goal towards an action is taken. Can be concrete or abstract. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="quest">quest</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="VideoGameSeries">VideoGameSeries</a>&nbsp; or<br/> <a href="Game">Game</a>&nbsp;</td><td class="prop-desc">The task that a player-controlled character, or group of characters may complete in order to gain a reward. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="replacee">replacee</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="ReplaceAction">ReplaceAction</a>&nbsp;</td><td class="prop-desc">A sub property of object. The object that is being replaced. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="replacer">replacer</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="ReplaceAction">ReplaceAction</a>&nbsp;</td><td class="prop-desc">A sub property of object. The object that replaces. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="reservationFor">reservationFor</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="Reservation">Reservation</a>&nbsp;</td><td class="prop-desc">The thing -- flight, event, restaurant,etc. being reserved. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a href="result">result</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a href="Action">Action</a>&nbsp;</td><td class="prop-desc">The result produced in the action. e.g. John wrote *a book*. </td></tr></table>
+
+
+</table>
+
+<br/><b>More specific Types</b><li> <a href="Action">Action</a><li> <a href="BroadcastService">BroadcastService</a><li> <a href="CreativeWork">CreativeWork</a><li> <a href="Event">Event</a><li> <a href="Intangible">Intangible</a><li> <a href="MedicalEntity">MedicalEntity</a><li> <a href="Organization">Organization</a><li> <a href="Person">Person</a><li> <a href="Place">Place</a><li> <a href="Product">Product</a><p class="version"><b>Schema Version 1.92</b></p>
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-52672119-1', 'auto');ga('send', 'pageview');</script> 
+
+</div>
+</body>
+</html>

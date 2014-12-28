@@ -1,0 +1,2 @@
+module SchemaOrg
+end
