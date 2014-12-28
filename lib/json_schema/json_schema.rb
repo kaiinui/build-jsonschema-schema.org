@@ -24,7 +24,7 @@ class JsonSchema::JsonSchema
         "$schema" => self._schema,
     }
     hash["id"] = self.id if self.id
-    hash["required"] = self.id if self.required != nil
+    hash["required"] = self.required if self.required != nil
     hash["title"] = self.title if self.title
     hash["name"] = self.name if self.name
     hash["description"] = self.description if self.description

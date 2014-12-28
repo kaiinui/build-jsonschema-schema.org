@@ -50,7 +50,7 @@ describe Type2JsonSchema do
   it { expect(schema.properties.first.title).to eq "additionalType" }
   it { expect(schema.properties.first.description).to eq "description" }
   it { expect(schema.properties.first.type).to eq "object" }
-  pending { expect(schema.properties.first.properties).to eq [] }
+  it { expect(schema.properties.first.properties.first.ref).to eq "Thing.json#/properties" }
 
   it { expect(schema.properties[1].type).to eq "string" }
   it { expect(schema.properties[1].properties).to eq [] }
