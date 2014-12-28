@@ -27,7 +27,7 @@ class SchemaOrg::Scraper::TypeScraper
 
   # @return [String]
   def name
-    @doc.css(".page-title a").text
+    @doc.css(".page-title a").last.text
   end
 
   # @return [String]
