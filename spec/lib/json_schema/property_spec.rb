@@ -22,6 +22,7 @@ describe JsonSchema::Property do
       p.description = "some"
       p.required = false
       p.id = "someURL"
+      p.format = "uri"
       p
     }
     let(:json) { property.to_hash }
@@ -31,5 +32,6 @@ describe JsonSchema::Property do
     it { expect(json["title"]).to be_nil }
     it { expect(json["required"]).to eq false }
     it { expect(json["id"]).to eq "someURL" }
+    it { expect(json["format"]).to eq "uri" }
   end
 end

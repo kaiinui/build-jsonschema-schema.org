@@ -42,17 +42,17 @@ describe Type2JsonSchema do
   it { expect(schema.title).to eq "Thing" }
   it { expect(schema.description).to eq "description" }
   it { expect(schema.type).to eq "object" }
-  it { expect(schema.required).to eq false }
+  it { expect(schema.required).to eq [] }
 
   it { expect(schema.properties.first.key).to eq "additionalType" }
   it { expect(schema.properties.first.id).to eq "http://schema.org/additionalType" }
-  it { expect(schema.properties.first.required).to eq false }
   it { expect(schema.properties.first.title).to eq "additionalType" }
   it { expect(schema.properties.first.description).to eq "description" }
   it { expect(schema.properties.first.type).to eq "object" }
   it { expect(schema.properties.first.properties.first.ref).to eq "Thing.json#/properties" }
 
   it { expect(schema.properties[1].type).to eq "string" }
+  it { expect(schema.properties[1].format).to eq "uri" }
   it { expect(schema.properties[1].properties).to eq [] }
 
 end

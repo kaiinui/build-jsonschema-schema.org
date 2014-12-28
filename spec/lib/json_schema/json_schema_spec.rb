@@ -28,12 +28,10 @@ describe JsonSchema::JsonSchema do
   it { expect(json["name"]).to eq "Thing" }
   it { expect(json["id"]).to eq "http://schema.org/Thing" }
   it { expect(json["description"]).to eq "description" }
-  it { expect(json["required"]).to eq false }
 
   it { expect(json["properties"]).to be_kind_of Hash }
   it { pp properties }
   it { expect(properties["additionalType"]["description"]).to eq "description" }
   it { expect(properties["additionalType"]["id"]).to eq "http://schema.org/additionalType" }
   it { expect(properties["additionalType"]["title"]).to eq "additionalType" }
-  it { expect(properties["additionalType"]["required"]).to eq false }
 end

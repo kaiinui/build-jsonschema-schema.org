@@ -7,8 +7,8 @@ class Type2JsonSchema
   def to_schema(type)
     schema = JsonSchema::JsonSchema.new
     schema.id = type.url
-    schema.required = false
     schema.title = type.name
+    schema.required = []
     schema.name = type.name
     schema.description = type.description
     schema.type = "object"
@@ -21,7 +21,6 @@ class Type2JsonSchema
   def _property_from_type_property(p)
     property = JsonSchema::Property.new
     property.id = p.url
-    property.required = false
     property.title = p.name
     property.description = p.description
     property.key = p.name
@@ -30,6 +29,8 @@ class Type2JsonSchema
       if _is_primitive(name)
         property.type = _primitive_type_map[name]
         property.properties = []
+        format = _format_map[name]
+        property.format = format if format != nil
       else
         property.type = "object"
         ref = JsonSchema::Property.new
@@ -55,6 +56,14 @@ class Type2JsonSchema
         "Boolean" => "boolean", # http://schema.org/Boolean has two child types.
           "False" => "boolean",
           "True" => "boolean"
+    }
+  end
+
+  # @see http://json-schema.org/latest/json-schema-validation.html#anchor107
+  def _format_map
+    {
+        "URL" => "uri",
+        "DateTime" => "date-time"
     }
   end
 

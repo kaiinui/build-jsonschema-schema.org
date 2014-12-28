@@ -4,6 +4,7 @@ class JsonSchema::Property
   attr_accessor :key, # String
                 :id, # String
                 :required, # Boolean
+                :format, # String @see http://json-schema.org/latest/json-schema-validation.html#anchor104
                 :title, # String
                 :description, # String
                 :type, # String
@@ -29,6 +30,7 @@ class JsonSchema::Property
     hash["title"] = self.title if self.title
     hash["description"] = self.description if self.description
     hash["type"] = self.type
+    hash["format"] = self.format if self.format
     if self.properties && self.properties.size > 0
       hash["properties"] = _property_hash
     end
